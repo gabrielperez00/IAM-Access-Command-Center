@@ -15,3 +15,42 @@ I developed this application to replace manual tracking methods with a secure, a
 * **Identity:** Entra ID (Azure AD)
 * **Backend:** SharePoint / Dataverse
 * **Logic:** Power Fx
+
+* 
+## Application Workflow
+
+**1. Main Command Center**
+![Check-In Screen](checkin.PNG)
+
+**2. User Check-In Form**
+![Check-In Form](checkinform.PNG)
+
+**3. Data Entry Validation**
+![Check-In Form Filled](checkinformfilled.PNG)
+
+**4. Active Room Roster (Populated State)**
+![Check-Out List](checkout.PNG)
+
+**5. User Check-Out Process**
+![Check-Out Screen](checkoutscreen.PNG)
+
+**6. Active Room Roster (Empty State)**
+![Empty Roster](TRempty.PNG)
+
+**7. Identity-Gated Admin Audit Log**
+![Admin View](adminview.PNG)
+
+##  How to Run & View the Logic
+
+Since this is a Power App, it cannot be run directly as a live website from GitHub. To inspect the screens, formulas, and internal logic I built, Please follow these steps:
+
+1. **Download the Source File:** Download the `TR Room Digital Access Log.msapp` file from this repository to your local machine.
+2. **Open Power Apps Studio:** Log in to your environment at [make.powerapps.com](https://make.powerapps.com).
+3. **Import the Application:**
+   * Click **Apps** on the left-hand sidebar.
+   * Select **New app** > **Canvas**.
+   * In the studio, go to **Open** (the folder icon) and select **Browse files**.
+4. **Load the File:** Select the `.msapp` file you downloaded.
+5. **Review the Architecture:** Once loaded, you can explore the `Patch` functions, `Filter` logic, and the `Visible` property security rules used throughout the app.
+
+*Note: This application was designed for a secure environment and requires a connected SharePoint or Dataverse list to write data. While the logic and UI are fully viewable, data writes will require a backend connection.*
